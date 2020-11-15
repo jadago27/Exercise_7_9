@@ -6,7 +6,7 @@
 import java.util.Scanner;
 
 public class Digits {
-    static void Main() {
+    public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
         int oneDigit = 0, twoDigits = 0, threeDigits = 0, moreDigits = 0, number;
         String inputNumber;
@@ -14,7 +14,7 @@ public class Digits {
         System.out.print("Insert a number: ");
         inputNumber = scan.next();
 
-        while(inputNumber.equals("end")){
+        while(!inputNumber.equals("end")){
             number = Integer.parseInt(inputNumber);
             if(number != 0)
             {
@@ -28,8 +28,10 @@ public class Digits {
                     moreDigits++;
                 }
             }
+            System.out.print("Insert a number: ");
             inputNumber = scan.next();
         }
-        System.out.println("one: "+ oneDigit +" two: "+ twoDigits +" three: "+ threeDigits +" more: "+ moreDigits);
+        System.out.printf("Numbers with one digit: %d two digits: %d three digits: %d more digits: %d"
+                        , oneDigit, twoDigits, threeDigits, moreDigits);
     }
 }

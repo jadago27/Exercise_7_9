@@ -6,7 +6,7 @@
 import java.util.Scanner;
 
 public class Average{
-    public static void Main(){
+    public static void main(String[] args){
         Scanner scan=new Scanner(System.in);
         double totalMark=0, mark, counter=0, average;
         String inputMark;
@@ -25,7 +25,7 @@ public class Average{
 
         if(counter!=0){
             average=totalMark/counter;
-            System.out.print("The average is {0}." + average);
+            System.out.println("The average is " + average);
         }
     }
 }
